@@ -3,7 +3,7 @@
 Created on Fri Jan 25 08:52:23 2019
 
 @author: gvandeyk
-but probably taken from the internet
+but probably taken from the internet - this you should not mention though
 """
 
 from functools import reduce
