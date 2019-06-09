@@ -7,15 +7,13 @@ Created on Fri Jun  7 14:58:36 2019
 
 
 def createMappingRecord(MappingData):
-
     # Initialising the MappingRecord dictionary
     MappingRecord = {'Customer': '',
                      'TradingPartner': '',
                      'MessageDirection': '',
                      'SourceMessage': '',
                      'TargetMessage': ''
-                     }
-
+                    }
     for Lines in MappingData:
         if 'Customer:' in Lines:
             MappingRecord['Customer'] = Lines.split(":")[1:]
@@ -24,12 +22,11 @@ def createMappingRecord(MappingData):
         elif 'Message Direction:' in Lines:
             MappingRecord['MessageDirection'] = Lines.split(":")[1:]
         elif 'Source Standard:' in Lines:
-            MappingRecord['SourceMessage'] = Lines.split(":")[1:]
+            MappingRecord['Source standard'] = Lines.split(":")[1:]
         elif 'Target Standard:' in Lines:
-            MappingRecord['TargetMessage'] = Lines.split(":")[1:]
+            MappingRecord['Target standard'] = Lines.split(":")[1:]
         else:
             pass
-
     return MappingRecord  # Type dictionary
 
 if __name__ == '__main__':

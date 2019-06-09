@@ -1,0 +1,18 @@
+Aan:	Geert Van Deyk
+Onderwerp:	Python test : Translation database automation request
+
+Hello Geert,
+
+Could you please provide me with a trnslation model name with following properties?
+
+Customer: SomeCustomer
+Trading Partner: SomeTP
+Source standard: SomeSourceStandard SomeSourceMessage SomeSourceVersion
+Target standard: SomeTargetStandard SomeTargetMessage SomeTargetVersion
+
+Remarks:
+
+Thank you,
+
+Best regards,
+Geert
