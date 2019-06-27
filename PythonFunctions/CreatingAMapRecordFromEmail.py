@@ -4,13 +4,13 @@ Created on Fri Jun  7 12:00:39 2019
 
 @author: gvandeyk
 """
-import ReadEmail
+from ReadEmail import readEmailFile, getEmailBody
 import createMappingRecord
 
-messagepath = 'C:/Users/gvandeyk/OneDrive - DXC Production/Downloads/'
-messagefile = messagepath + 'SomeEmail.txt'
+messagepath = input() + '/'
+messagefile = (messagepath + input()).replace('\\','/')
 
-MyEmail = ReadEmail.readEmailFile(messagefile)
-MappingRequest = ReadEmail.getEmailBody(MyEmail)
+MyEmail = readEmailFile(messagefile)
+MappingRequest = getEmailBody(MyEmail)
 MappingRecord = createMappingRecord.createMappingRecord(MappingRequest)
 print(MappingRecord)
