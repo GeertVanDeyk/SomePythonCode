@@ -4,7 +4,7 @@ Spyder Editor
 
 This is a temporary script file.
 """
-import string 
+import string
 ### Afprinten prijslijst
 def printPrijslijst(dict_basis, dict_vlees, dict_saus) :
     print('Prijslijst\n\n')
@@ -12,16 +12,16 @@ def printPrijslijst(dict_basis, dict_vlees, dict_saus) :
         print(basis + ' - ' + dict_basis_ID_NAAM[basis] + '\n')
         for prijs in dict_basis[basis].keys():
           print('\t' + prijs + '--' + str(dict_basis[basis][prijs]))
-        print('\n')  
+        print('\n')
     for vlees in dict_vlees.keys() :
           print(vlees + ' - ' + dict_vlees_ID_NAAM[vlees] + '---' + str(dict_vlees[vlees]))
-    print('\n')   
+    print('\n')
     for saus in dict_saus.keys() :
         print (saus + '-' + dict_saus_ID_NAAM[saus])
         for prijs in dict_saus[saus].keys():
             print ('\t' + prijs + '---' + str(dict_saus[saus][prijs]))
         print('\n')
-    print('BEDANKT VOOR UW BEZOEK') 
+    print('BEDANKT VOOR UW BEZOEK')
 
 
 
@@ -36,7 +36,7 @@ dict_saus = {saus : dict_saus_prijs for saus in dict_saus_ID_NAAM}
 
 dict_basis_ID_NAAM = dict([('b1','frites'), ('b2','kroketten')])
 basis_maat = ['groot','medium','klein']
-basis_prijs = [4, 3.5,3] 
+basis_prijs = [4, 3.5,3]
 dict_basis_prijs = dict(zip(basis_maat,basis_prijs))
 dict_basis = { basis : dict_basis_prijs for basis in dict_basis_ID_NAAM }
 
@@ -63,7 +63,3 @@ for item in Bestelling:
       Totaal_te_betalen = Totaal_te_betalen + dict_basis[item]['groot']
 print('\n')
 print('Totaal te betalen ----------------- ' + str(Totaal_te_betalen) )
-
-
-    
-
