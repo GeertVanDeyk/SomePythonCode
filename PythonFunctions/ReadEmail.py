@@ -10,7 +10,7 @@ from email.parser import BytesParser, Parser
 from email.policy import default
 
 
-def readEmailFile(Emailfile):
+def readEmail(Emailfile):
     # e-mail is in a file
     with open(Emailfile, 'rb') as fp:
         msg = BytesParser(policy=default).parse(fp)
@@ -35,7 +35,7 @@ if __name__ == '__main__':
     # This is for testing purposes :
     messagepath = 'C:/Users/gvandeyk/OneDrive - DXC Production/Downloads/'
     messagefile = messagepath + 'SomeEmail.txt'
-    MyEmail = readEmailFile(messagefile)
+    MyEmail = readEmail(messagefile)
     print(storeEmailHeaderInfo(MyEmail))
     print("----------------------------")
     print(getEmailBody(MyEmail))

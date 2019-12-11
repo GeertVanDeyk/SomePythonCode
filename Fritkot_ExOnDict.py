@@ -49,6 +49,7 @@ printPrijslijst(dict_basis, dict_vlees, dict_saus)
 # Bestellen
 
 Bestelling = str(input('Voer uw bestelling in')).split()
+Bestelling.sort()
 Totaal_te_betalen = 0
 for item in Bestelling:
    if item[:1] == 's':
