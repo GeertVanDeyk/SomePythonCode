@@ -1,4 +1,5 @@
 #example 6.6
+
 import cv2
 import face_recognition
 
